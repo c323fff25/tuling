@@ -1,5 +1,5 @@
 window = globalThis;
-// delete global
+delete global
 document = {}
 navigator = {}
 
