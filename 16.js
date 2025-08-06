@@ -1,9 +1,11 @@
+window = globalThis;
+// delete global
+document = {}
+navigator = {}
 
-window = global;
-document = {};
-delete global;
-navigator = {};
-
+document.createElement = function(val) {
+}
+window.XMLHttpRequest = function() {}
 
 var Sign = function() {
     function a04afa8n(_$c, _$n) {
@@ -5334,47 +5336,47 @@ var Sign = function() {
                     return _$lM(_$lv);
                 }
             };
-            return function(_$lM) {
-                var Xl = a04afa8n
-                  , _$lv = {
-                    'jtEUc': Xl(0x245),
-                    'iplIn': function(_$lf, _$lT) {
-                        return _$lO.osbBO(_$lf, _$lT);
-                    }
-                }
-                  , _$lo = arguments.length > 0x50d * -0x3 + -0x1a58 + -0x14c * -0x20 && void (-0x1482 + -0x153 * 0x16 + 0x31a4) !== arguments[-0x1 * -0x1af9 + -0xa * 0x4 + -0x1ad0] ? arguments[0x5 * -0x5cb + 0x16 * -0xbb + 0x2 * 0x1685] : 0x673 * 0x12 + -0x4339 + -0x9bb * -0x1;
-                return new _$BC(function(_$lf, _$lT) {
-                    var Xm = Xl
-                      , _$ll = {
-                        'mvLZh': _$lv.jtEUc
-                    }
-                      , _$lm = function(_$lJ) {
-                        return function(_$lg) {
-                            _$lJ(),
-                            clearTimeout(_$lX),
-                            _$lE.parentNode && _$lE.parentNode.removeChild(_$lE);
-                        }
-                        ;
-                    }
-                      , _$lX = setTimeout(_$lm(_$lT), _$lo)
-                      , _$lE = document.createElement(Xm(0x20e));
-                    _$lE.type = Xm(0x2da),
-                    _$lE.readyState ? _$lE.onreadystatechange = function(_$lJ) {
-                        var XX = Xm;
-                        XX(0x296) !== _$lE.readyState && _$ll.mvLZh !== _$lE.readyState || _$lm(_$lf)();
-                    }
-                    : _$lE.onload = _$lv.iplIn(_$lm, _$lf),
-                    _$lE.onerror = _$lm(_$lT),
-                    _$lE.src = _$lM,
-                    document.getElementsByTagName(Xm(0x281))[0x17b * 0x1 + 0x1535 + -0x42 * 0x58].appendChild(_$lE);
-                }
-                );
-            }(_$lR, _$lD).then(function(_$lM) {
-                _$lU();
-            }).catch(function(_$lM) {
-                delete _$lY[_$lR],
-                _$lw.uMrKY(_$lB);
-            });
+            // return function(_$lM) {
+            //     var Xl = a04afa8n
+            //       , _$lv = {
+            //         'jtEUc': Xl(0x245),
+            //         'iplIn': function(_$lf, _$lT) {
+            //             return _$lO.osbBO(_$lf, _$lT);
+            //         }
+            //     }
+            //       , _$lo = arguments.length > 0x50d * -0x3 + -0x1a58 + -0x14c * -0x20 && void (-0x1482 + -0x153 * 0x16 + 0x31a4) !== arguments[-0x1 * -0x1af9 + -0xa * 0x4 + -0x1ad0] ? arguments[0x5 * -0x5cb + 0x16 * -0xbb + 0x2 * 0x1685] : 0x673 * 0x12 + -0x4339 + -0x9bb * -0x1;
+            //     return new _$BC(function(_$lf, _$lT) {
+            //         var Xm = Xl
+            //           , _$ll = {
+            //             'mvLZh': _$lv.jtEUc
+            //         }
+            //           , _$lm = function(_$lJ) {
+            //             // return function(_$lg) {
+            //                 // _$lJ(),
+            //                 // clearTimeout(_$lX),
+            //                 // _$lE.parentNode && _$lE.parentNode.removeChild(_$lE);
+            //             // }
+            //             // ;
+            //         }
+            //         //   , _$lX = setTimeout(_$lm(_$lT), _$lo)
+            //           , _$lE = document.createElement(Xm(0x20e));
+            //         _$lE.type = Xm(0x2da),
+            //         _$lE.readyState ? _$lE.onreadystatechange = function(_$lJ) {
+            //             var XX = Xm;
+            //             XX(0x296) !== _$lE.readyState && _$ll.mvLZh !== _$lE.readyState || _$lm(_$lf)();
+            //         }
+            //         : _$lE.onload = _$lv.iplIn(_$lm, _$lf),
+            //         _$lE.onerror = _$lm(_$lT),
+            //         _$lE.src = _$lM,
+            //         document.getElementsByTagName(Xm(0x281))[0x17b * 0x1 + 0x1535 + -0x42 * 0x58].appendChild(_$lE);
+            //     }
+            //     );
+            // }(_$lR, _$lD).then(function(_$lM) {
+            //     _$lU();
+            // }).catch(function(_$lM) {
+            //     delete _$lY[_$lR],
+            //     _$lw.uMrKY(_$lB);
+            // });
         }
         )),
         _$lY[_$lR];
@@ -10642,18 +10644,18 @@ var Sign = function() {
     }
     ,
     _$lk.prototype.sign = function(_$lR) {
-        var EO = lj;
         try {
             var _$lw = this._$sdnmd(_$lR);
             _$lw = btoa(_$lw.h5st+String(_$lw.t))
             window.abc = _$lw;
             return _$BC.resolve(_$lw);
         } catch (_$lD) {
-            return this._onSign({
-                'code': _$TE,
-                'message': EO(0x23f)
-            }),
-            _$BC.resolve(_$lR);
+            // return this._onSign({
+            //     'code': _$TE,
+            //     'message': EO(0x23f)
+            // }),
+            // _$BC.resolve(_$lR);
+
         }
     }
     ,
@@ -10663,6 +10665,8 @@ var Sign = function() {
     window.Sign = _$lk,
     _$lk;
 }();
+
+
 
 window.PcSign = new window.Sign({
     appId: "b5216",
@@ -10678,7 +10682,8 @@ window.PcSign = new window.Sign({
         e.code,
         e.message
     }
-});
+})
+
 
 
 function get_sign(page, t) {
@@ -10686,6 +10691,9 @@ function get_sign(page, t) {
         "page": page,
         "t": t
     }
-    window.PcSign.sign(j).then(function(g) {});
+    window.PcSign.sign(j)
     return {"page":page,"t":t,"h5":window.abc};
 }
+
+
+
